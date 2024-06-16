@@ -1,7 +1,25 @@
-echo "# park-manager-beyond-the-gates" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/AresVRCOfficial/park-manager-beyond-the-gates.git
-git push -u origin main
+@echo off
+setlocal
+
+:: Prompt the user for a commit message
+set /p commitMessage=Enter commit message: 
+
+:: Ensure the commit message is not empty
+if "%commitMessage%"=="" (
+    echo Commit message cannot be empty.
+    goto end
+)
+
+:: Add all changes to the staging area
+git add .
+
+:: Commit the changes with the user's message
+git commit -m "%commitMessage%"
+
+:: Push the changes to the main branch
+git push origin main
+
+:end
+echo Update complete.
+pause
+endlocal
