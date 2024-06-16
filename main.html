@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Manager: Beyond The Gates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const aboutSection = document.querySelector(".about");
+        const fireworksContainer = document.createElement("div");
+        fireworksContainer.classList.add("fireworks");
+    
+        for (let i = 0; i < 10; i++) {
+            const firework = document.createElement("div");
+            firework.classList.add("firework");
+            firework.style.left = Math.random() * 100 + "%";
+            firework.style.top = Math.random() * 100 + "%";
+            fireworksContainer.appendChild(firework);
+        }
+    
+        aboutSection.appendChild(fireworksContainer);
+    });
+    </script>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Park Manager: Beyond The Gates Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to Park Manager: Beyond The Gates</h1>
+            <p>Experience the thrill of building and managing your own theme park!</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Park Manager: Beyond The Gates</h2>
+            <p>Experience the thrill of building and managing your own theme park!</p>
+            <p>Park Manager: Beyond The Gates lets you design your dream park, attract visitors, and watch your creation come to life.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-box">
+                <div class="feature">
+                    <img src="feature1.png" alt="Feature 1">
+                    <h3>Customize Your Park</h3>
+                    <p>Build and design your dream theme park with a wide range of attractions, rides, and amenities.</p>
+                </div>
+                <div class="feature">
+                    <img src="feature2.png" alt="Feature 2">
+                    <h3>Manage Staff and Finances</h3>
+                    <p>Hire and train employees, set ticket prices, and optimize your finances to run a successful park.</p>
+                </div>
+                <div class="feature">
+                    <img src="feature3.png" alt="Feature 3">
+                    <h3>Engage Guests</h3>
+                    <p>Keep guests entertained with exciting rides, shows, and events while ensuring their satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2>Screenshots</h2>
+            <div class="screenshot-box">
+                <img src="screenshot1.jpg" alt="Screenshot 1">
+                <img src="screenshot2.jpg" alt="Screenshot 2">
+                <img src="screenshot3.jpg" alt="Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Park Manager: Beyond The Gates. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href=""><img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://x.com/ParkManagerBTG"><img src="twitter.png" alt="Twitter"></a></li>
+                <li><a href=""><img src="instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://discord.gg/RuE97y3KNp"><img src="discord.jpg" alt="Discord"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
